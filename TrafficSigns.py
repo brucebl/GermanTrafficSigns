@@ -1,3 +1,7 @@
+
+# Bruce Blum
+# CNN using Tensorflow to predict traffic signs based on the German Traffic Sign Dataset
+
 import cv2
 import matplotlib.pyplot as plt
 import numpy as np
@@ -10,8 +14,6 @@ import tensorflow as tf
 #from google.colab import drive
 from tensorflow import keras
 from tensorflow.keras import layers
-
-# CNN using Tensorflow to predict traffic signs based on the German Traffic Sign Dataset
 
 # Set up training and test data
 #drive.mount("/content/drive")
@@ -320,7 +322,7 @@ for index in range(numTestImgs):
     print(imgPath)
     testImg = tf.keras.preprocessing.image.load_img(imgPath, target_size=(imgHeight, imgWidth))
     aryImg = tf.keras.preprocessing.image.img_to_array(testImg)
-    #aryImg = aryImg/255.0
+    
     imgBatch = np.expand_dims(aryImg, axis=0)
     
     ax = plt.subplot(4, 4, index+1)
